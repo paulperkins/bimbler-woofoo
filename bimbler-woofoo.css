@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+.widefat .column-order_status mark.bimbler-ordered:after,
+.widefat .column-order_status mark.bimbler-arrived:after
+	 {
+	font-family: WooCommerce;
+	speak: none;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	text-indent: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center
+}
+
+.widefat .column-order_status mark.bimbler-ordered:after {
+	content: "\e01e";
+	color: #999;
+}
+
+.widefat .column-order_status mark.bimbler-arrived:after {
+	content: "\e01a";
+	color: #999;
+}
+
+
