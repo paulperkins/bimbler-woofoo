@@ -69,6 +69,10 @@ class Bimbler_WooFoo {
         	
         	// Add new order statuses.
         	add_filter( 'wc_order_statuses', array ($this, 'add_bimbler_order_statuses'));
+
+			// Turn off breadcrumbs on Woo pages.			
+			add_action( 'init', array ($this, 'remove_wc_breadcrumbs'));
+
         	
 		} // End constructor.
 	
@@ -149,5 +153,14 @@ class Bimbler_WooFoo {
 		wp_enqueue_style( 'style-bimbler-woofoo' );
 
 	}
+	
+	/**
+	 * Remove WooCommerce breadcumb.
+	 *
+	 */
+	function remove_wc_breadcrumbs() {
+    		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+	}
+
 	
 } // End class
