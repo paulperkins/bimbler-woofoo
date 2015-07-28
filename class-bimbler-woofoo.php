@@ -78,6 +78,16 @@ class Bimbler_WooFoo {
 	
 		function register_bimbler_order_statuses() {
 			
+			register_post_status( 'wc-bimbler-paid', 
+									array(	'label'                     => 'Paid',
+											'public'                    => true,
+											'exclude_from_search'       => false,
+											'show_in_admin_all_list'    => true,
+											'show_in_admin_status_list' => true,
+											'label_count'               => _n_noop( 'Paid <span class="count">(%s)</span>', 
+																					'Paid <span class="count">(%s)</span>' )
+								));
+			
 			register_post_status( 'wc-bimbler-ordered', 
 									array(	'label'                     => 'Ordered',
 											'public'                    => true,
@@ -101,6 +111,9 @@ class Bimbler_WooFoo {
 		
 		/*
 		 * Add custom order statuses:
+		 * 	- pending payment
+		 *  - paid (new)
+		 *
 		 * 	- processing
 		 *  - ordered (new)
 		 *  - arrived (new)
@@ -114,6 +127,11 @@ class Bimbler_WooFoo {
 			foreach ( $order_statuses as $key => $status ) {
 				
 				$new_order_statuses[ $key ] = $status;
+
+				if ( 'wc-pending' === $key ) {
+					$new_order_statuses['wc-bimbler-paid'] = 'Paid';
+				}
+
 		
 				if ( 'wc-processing' === $key ) {
 					$new_order_statuses['wc-bimbler-arrived'] = 'Arrived';
