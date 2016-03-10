@@ -1,5 +1,6 @@
 @CHARSET "UTF-8";
 
+.widefat .column-order_status mark.bimbler-paid:after,
 .widefat .column-order_status mark.bimbler-ordered:after,
 .widefat .column-order_status mark.bimbler-arrived:after
 	 {
@@ -30,4 +31,8 @@
 	color: #999;
 }
 
+.widefat .column-order_status mark.bimbler-paid:after {
+	content: "\f283";
+	color: #999;
+}
 
