@@ -4,7 +4,8 @@
 .widefat .column-order_status mark.bimbler-ordered:after,
 .widefat .column-order_status mark.bimbler-arrived:after
 	 {
-	font-family: WooCommerce;
+/*	font-family: WooCommerce; */
+	font-family: FontAwesome;
 	speak: none;
 	font-weight: 400;
 	font-variant: normal;
