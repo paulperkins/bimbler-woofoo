@@ -340,7 +340,7 @@ class Bimbler_WooFoo {
 		wp_register_style( 'style-bimbler-woofoo', plugins_url('bimbler-woofoo.css', __FILE__) );
 		wp_enqueue_style( 'style-bimbler-woofoo' );
 
-		wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css'); 
+		wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'); 
 	}
 	
 	/**
