@@ -7,7 +7,7 @@
 /*	font-family: WooCommerce; */
 	font-family: FontAwesome;
 	speak: none;
-	font-weight: 400;
+	font-weight: normal; /*400; */
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
@@ -19,16 +19,17 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	text-align: center
+	text-align: center;
+	text-decoration: none;
 }
 
 .widefat .column-order_status mark.bimbler-ordered:after {
-	content: "\e01e";
+	content: "\f07a";
 	color: #999;
 }
 
 .widefat .column-order_status mark.bimbler-arrived:after {
-	content: "\e01a";
+	content: "\f0d1";
 	color: #999;
 }
 
